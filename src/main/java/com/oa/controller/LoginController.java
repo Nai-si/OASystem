@@ -24,11 +24,29 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
+    /**
+     * 登录功能
+     * @param no
+     * @param password
+     * @param session
+     * @return
+     */
     @RequestMapping("login.do")
     public JsonResult login(String no , String password, HttpSession session){
         User user = loginService.login(no, password);
         session.setAttribute(StrUtil.LOGIN_USER,user);
         return new JsonResult(1,user.getIdentity());
+    }
+
+    /**
+     * 注销登录功能
+     * @param session
+     * @return
+     */
+    @RequestMapping("/logOut.do")
+    public JsonResult logOut(HttpSession session){
+        session.invalidate();
+        return new JsonResult(1,"注销登录成功!");
     }
 
 }
