@@ -43,10 +43,14 @@ public class LoginController {
      * @param session
      * @return
      */
-    @RequestMapping("/logOut.do")
-    public JsonResult logOut(HttpSession session){
-        session.invalidate();
-        return new JsonResult(1,"注销登录成功!");
+    @RequestMapping("loginOut.do")
+    public JsonResult loginOut(HttpSession session){
+        session.invalidate ();
+        return new JsonResult (1,"注销登录成功!");
     }
+
+
+
+
 
 }

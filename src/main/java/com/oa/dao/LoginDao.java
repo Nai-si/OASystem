@@ -11,4 +11,5 @@ import com.oa.entity.User;
 public interface LoginDao {
 
     public User login(String no);
+
 }

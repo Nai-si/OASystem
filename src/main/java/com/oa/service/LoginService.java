@@ -10,4 +10,6 @@ import com.oa.entity.User;
  */
 public interface LoginService {
     public User login(String no , String password);
+
+
 }

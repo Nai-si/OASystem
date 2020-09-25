@@ -299,7 +299,8 @@
     $("#beButton").click(function () {
         $.ajax({
             type: "post",
-            url: "/OASystem/login/logOut.do",
+            url: "/OASystem/login/loginOut.do",
+            dataType:"json",
             success: function (data) {
                 if (data.code == 1) {
                     alert(data.info)
