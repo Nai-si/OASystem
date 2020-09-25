@@ -74,26 +74,27 @@
 
     </bean>
     <!--拦截器相关的配置-->
-    <!--    <mvc:interceptors>-->
-    <!--&lt;!&ndash;        <mvc:interceptor>&ndash;&gt;-->
-    <!--&lt;!&ndash;&lt;!&ndash;            配置哪些资源需要被拦截 拦截  任意路径下面，后缀是.do请求&ndash;&gt;&ndash;&gt;-->
-    <!--&lt;!&ndash;            <mvc:mapping path="/**/*.do"/>&ndash;&gt;-->
-    <!--&lt;!&ndash;&lt;!&ndash;           指定拦截器&ndash;&gt;&ndash;&gt;-->
-    <!--&lt;!&ndash;            <bean class="com.ddedu.interceptor.TimeInterceptor"></bean>&ndash;&gt;-->
-    <!--&lt;!&ndash;        </mvc:interceptor>&ndash;&gt;-->
-    <!--        <mvc:interceptor>-->
-    <!--&lt;!&ndash;            拦截所有资源包括一些静态资源  js&ndash;&gt;-->
-    <!--            <mvc:mapping path="/**"/>-->
-    <!--            &lt;!&ndash;除了js文件夹的所有的文件不被拦截其他的被拦截&ndash;&gt;-->
-    <!--            <mvc:exclude-mapping path="/js/**"/>-->
-    <!--            <mvc:exclude-mapping path="/layui/**"/>-->
-    <!--            &lt;!&ndash;除了login.html login.do  不被拦截，其他的被拦截-->
-    <!--            &ndash;&gt;-->
-    <!--            -->
-    <!--            <mvc:exclude-mapping path="/**/login.*"/>-->
-    <!--            <bean class="com.ddedu.interceptor.LoginInterceptor"/>-->
-    <!--        </mvc:interceptor>-->
-    <!--    </mvc:interceptors>-->
+<!--        <mvc:interceptors>-->
+<!--    &lt;!&ndash;        <mvc:interceptor>&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            配置哪些资源需要被拦截 拦截  任意路径下面，后缀是.do请求&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;            <mvc:mapping path="/**/*.do"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;           指定拦截器&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;            <bean class="com.ddedu.interceptor.TimeInterceptor"></bean>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </mvc:interceptor>&ndash;&gt;-->
+<!--            <mvc:interceptor>-->
+<!--    &lt;!&ndash;            拦截所有资源包括一些静态资源  js&ndash;&gt;-->
+<!--                <mvc:mapping path="/**"/>-->
+<!--                &lt;!&ndash;除了js文件夹的所有的文件不被拦截其他的被拦截&ndash;&gt;-->
+<!--                <mvc:exclude-mapping path="/js/**"/>-->
+<!--                <mvc:exclude-mapping path="/layui/**"/>-->
+<!--                &lt;!&ndash;除了login.html login.do  不被拦截，其他的被拦截-->
+<!--                &ndash;&gt;-->
+
+<!--                <mvc:exclude-mapping path="/**/login.*"/>-->
+<!--                <bean class="com.oa.interceptor.LoginInterceptor"/>-->
+<!--            </mvc:interceptor>-->
+<!--        </mvc:interceptors>-->
+
 
     <!-- 视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

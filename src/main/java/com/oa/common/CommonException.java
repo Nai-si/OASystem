@@ -18,25 +18,27 @@ import java.util.Iterator;
 @ResponseBody  // 修饰类，类中的所有方法，相当于都使用该注解修饰
 public class CommonException {
 
-    @ExceptionHandler(ConstraintViolationException.class)
-//    @ResponseBody
-    public JsonResult constraintViolationException(ConstraintViolationException ex){
-        // 验证不通过的信息
-        Iterator<ConstraintViolation<?>>
-                iterator = ex.getConstraintViolations().iterator();
+    @ExceptionHandler(ConstraintViolationException.class)//修饰方法，表示的是一个异常处理方法
+    //返回一个json数据
+    @ResponseBody
+    public JsonResult ConstraintViolationException(ConstraintViolationException ex){
+        Iterator<ConstraintViolation<?>> iterator = ex.getConstraintViolations().iterator();
         String message = null;
         if (iterator.hasNext()) {
             message = iterator.next().getMessage();
-            System.out.println(message);
+            System.out.println("message = " + message);
         }
-        return new JsonResult(0, "验证异常");
+        return new JsonResult(0,message);
     }
 
-    // 处理那些没有预料到的异常
+    /**
+     * 处理那些没有遇到的异常
+     * @param ex
+     * @return
+     */
     @ExceptionHandler
-//    @ResponseBody
-    public JsonResult commonException(Exception ex){
-        return new JsonResult(0, ex.getMessage());
+    public JsonResult CommonException(Exception ex){
+        return new JsonResult(0,ex.getMessage());
     }
 
 }
