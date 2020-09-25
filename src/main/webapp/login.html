@@ -27,11 +27,11 @@
 			</h1>
 			<div class="layui-user-icon larry-login">
 				<input type="text" placeholder="账号" class="login_txtbx" id="no"
-					name="no" value="EB100" />
+					name="no"  />
 			</div>
 			<div class="layui-pwd-icon larry-login">
-				<input type="password" placeholder="密码" name="pass" id="pass"
-					value="123456" class="login_txtbx" />
+				<input type="password" placeholder="密码" name="password" id="password"
+					 class="login_txtbx" />
 			</div>
 			<div class="feri-code">
 				<div id="mpanel4"></div>
@@ -87,14 +87,13 @@
 		$("#btn1").click(function() {
 			$.ajax({
 				type:"post",
-				url:"login.do",
+				url:"/OASystem/login/login.do",
 				data:$("form").serialize(),
 				dataType:"json",
 				success:function(data){
 					console.log(data)
 					if(data.code==1){
 						if(data.info==1){
-
 						window.location.href="index.html";
 						}else{
 							window.location.href="indexStu.html"
