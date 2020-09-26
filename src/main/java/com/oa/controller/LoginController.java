@@ -54,7 +54,7 @@ public class LoginController {
      * @param session
      * @return
      */
-    @RequestMapping("/LoginToJudge")
+    @RequestMapping("LoginToJudge")
     public JsonResult LoginToJudge(HttpSession session){
         User user = (User) session.getAttribute(StrUtil.LOGIN_USER);
         if (user == null) {
