@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="layui-container" style="margin-top: 50px;">
-		<form class="layui-form" action="grade/insertGrade.do" method="post" id="form1" onsubmit="return false">
+		<form class="layui-form" action="/OASystem/grade/insertGrade.do" method="post" id="form1" onsubmit="return false">
 			<div class="layui-form-item">
 				<label class="layui-form-label">班级序号</label>
 				<div class="layui-input-block">
@@ -87,7 +87,7 @@
 		$("#submit1").click(function () {
 			$.ajax({
 				type:'post',
-				url:'grade/insertGrade.do',
+				url:'/OASystem/grade/insertGrade.do',
 				data:$("#form1").serialize(),
 				dataType:'json',
 				success:function (data) {
