@@ -49,8 +49,18 @@ public class LoginController {
         return new JsonResult (1,"注销登录成功!");
     }
 
-
-
-
-
+    /**
+     * 验证主页是否登录
+     * @param session
+     * @return
+     */
+    @RequestMapping("/LoginToJudge")
+    public JsonResult LoginToJudge(HttpSession session){
+        User user = (User) session.getAttribute(StrUtil.LOGIN_USER);
+        if (user == null) {
+            return new JsonResult(0,"未登录");
+        }else{
+            return new JsonResult(1,user.getIdentity());
+        }
+    }
 }

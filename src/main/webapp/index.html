@@ -277,7 +277,7 @@
         $(function () {
             $.ajax({
                 type: "post",
-                url: "LoginToJudge.do",
+                url: "/OASystem/login/LoginToJudge.do",
                 dataType: "json",
                 success: function (data) {
                     console.log(data)
@@ -286,7 +286,7 @@
                             layer.msg("老师你好，登录成功")
                         }
                     } else {
-                        layer.msg("未登录")
+                        alert("未登录")
                         window.location.href = "login.html"
                     }
                 }
