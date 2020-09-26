@@ -2,6 +2,8 @@ package com.oa.dao;
 
 import com.oa.entity.Grade;
 
+import java.util.List;
+
 /**
  * @ProjectName: OASystem
  * @Author: Jsx
@@ -15,5 +17,11 @@ public interface GradeDao {
      * @param grade
      */
     void insertGrade(Grade grade);
+
+    /**
+     * 展示班级列表
+     * @return
+     */
+    List<Grade> selectGradeAll();
 
 }

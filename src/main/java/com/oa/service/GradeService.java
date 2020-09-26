@@ -2,6 +2,8 @@ package com.oa.service;
 
 import com.oa.entity.Grade;
 
+import java.util.List;
+
 /**
  * @ProjectName: OASystem
  * @Author: Jsx
@@ -15,5 +17,13 @@ public interface GradeService {
      * @param grade
      */
     void insertGrade(Grade grade);
+
+    /**
+     * 展示班级列表（分页）
+     * @param page
+     * @param limit
+     * @return
+     */
+    List<Grade> selectGradeAll(Integer page,Integer limit);
 
 }

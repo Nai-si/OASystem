@@ -24,4 +24,8 @@
         </trim>
         )
     </insert>
+    <!-- 查询grade所有信息  查询条件可动态添加 -->
+    <select id="selectGradeAll" resultType="com.oa.entity.Grade">
+        select * from t_grade
+    </select>
 </mapper>
