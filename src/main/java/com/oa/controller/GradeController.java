@@ -46,4 +46,13 @@ public class GradeController {
 
     }
 
+    /**
+     * 用来展示添加学生信息时的班级下拉列表
+     * @return
+     */
+    @RequestMapping("/selectGrade.do")
+    public JsonResult selectGrade(){
+        return new JsonResult(1,gradeService.selectGrade());
+    }
+
 }

@@ -38,5 +38,13 @@ public class GradeServiceImpl implements GradeService {
         return gradeDao.selectGradeAll();
     }
 
+    /**
+     * 添加学生信息时用来展示班级的下拉列表
+     */
+    @Override
+    public List<Grade> selectGrade() {
+        return gradeDao.selectGradeAll();
+    }
+
 
 }

@@ -26,4 +26,11 @@ public interface GradeService {
      */
     List<Grade> selectGradeAll(Integer page,Integer limit);
 
+    /**
+     * 添加学生信息时班级下拉框的展示
+     * @return
+     */
+    List<Grade> selectGrade();
+
+
 }
