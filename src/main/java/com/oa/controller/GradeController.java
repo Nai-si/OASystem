@@ -55,4 +55,15 @@ public class GradeController {
         return new JsonResult(1,gradeService.selectGrade());
     }
 
+    /**
+     * 修改班级信息
+     * @param grade
+     * @return
+     */
+    @RequestMapping("/updateGrade.do")
+    public JsonResult updateGrade(Grade grade){
+        gradeService.updateGradeInfo(grade);
+        return new JsonResult(1,"修改班级信息成功");
+    }
+
 }

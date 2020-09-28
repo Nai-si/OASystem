@@ -262,7 +262,7 @@
 			var id = $("#id").val()
 			$.ajax({
 				type: 'get',
-				url:'grade/updateGrade.do?id='+id,
+				url:'/OASystem/grade/updateGrade.do?id='+id,
 				data:$("#form1").serialize(),
 				dataType: 'json',
 				success:function (date) {

@@ -32,5 +32,9 @@ public interface GradeService {
      */
     List<Grade> selectGrade();
 
-
+    /**
+     * 修改班级信息
+     * @param grade
+     */
+    void updateGradeInfo(Grade grade);
 }

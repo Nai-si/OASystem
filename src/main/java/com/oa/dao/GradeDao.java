@@ -24,4 +24,9 @@ public interface GradeDao {
      */
     List<Grade> selectGradeAll();
 
+    /**
+     * 修改班级信息
+     * @param grade
+     */
+    void updateGradeInfo(Grade grade);
 }

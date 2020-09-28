@@ -46,5 +46,18 @@ public class GradeServiceImpl implements GradeService {
         return gradeDao.selectGradeAll();
     }
 
+    /**
+     * 修改班级信息
+     * @param grade
+     */
+    @Override
+    public void updateGradeInfo(Grade grade) {
+        if (grade.getId() == null){
+            throw new RuntimeException("数据错误");
+        }
+        gradeDao.updateGradeInfo(grade);
+
+    }
+
 
 }

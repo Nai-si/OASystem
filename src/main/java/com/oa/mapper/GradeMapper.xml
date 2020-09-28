@@ -28,4 +28,17 @@
     <select id="selectGradeAll" resultType="com.oa.entity.Grade">
         select * from t_grade
     </select>
+    <!-- 修改班级信息 -->
+    <update id="updateGradeInfo" parameterType="com.oa.entity.Grade">
+        update t_grade
+        <set>
+            <if test="u_no != null"> u_no = #{u_no}, </if>
+            <if test="name != null"> name = #{name}, </if>
+            <if test="createtime != null"> createtime = #{createtime}, </if>
+            <if test="flag != null"> flag = #{flag}, </if>
+            <if test="week != null"> week = #{week}, </if>
+            <if test="location != null"> location = #{location}</if>
+        </set>
+        where id = #{id}
+    </update>
 </mapper>
