@@ -1,6 +1,7 @@
 package com.oa.service.impl;
 
 import com.oa.dao.StudentDao;
+import com.oa.entity.Student;
 import com.oa.service.StudentService;
 import com.oa.vo.VoStudent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,13 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public VoStudent selectStudentByNo(String no) {
         return studentDao.selectStudentByNo(no);
+    }
+
+    @Override
+    public void insertStudent(Student student) {
+        if (student == null) {
+            throw new RuntimeException("信息为空");
+        }
+        studentDao.insertStudent(student);
     }
 }

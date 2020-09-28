@@ -111,7 +111,7 @@
 					,layedit = layui.layedit;
 
 			layui.$.ajax({
-				url: "student/selectGrade.do",
+				url: "/OASystem/student/selectGrade.do",
 				type: 'get',
 				dataType: 'json',
 				success: function (data) {
@@ -131,7 +131,7 @@
 		$("#submit1").click(function () {
 			$.ajax({
 				type:'post',
-				url:'student/insertStudent.do',
+				url:'/OASystem/student/insertStudent.do',
 				data:$("#form1").serialize(),
 				dataType:'json',
 				success:function (data) {

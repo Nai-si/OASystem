@@ -1,5 +1,6 @@
 package com.oa.dao;
 
+import com.oa.entity.Student;
 import com.oa.vo.VoStudent;
 
 /**
@@ -11,5 +12,7 @@ import com.oa.vo.VoStudent;
 public interface StudentDao {
 
     VoStudent selectStudentByNo(String no);
+
+    void insertStudent(Student student);
 
 }

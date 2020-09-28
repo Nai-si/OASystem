@@ -1,6 +1,7 @@
 package com.oa.controller;
 
 import com.oa.common.JsonResult;
+import com.oa.entity.Student;
 import com.oa.entity.User;
 import com.oa.service.StudentService;
 import com.oa.util.StrUtil;
@@ -23,7 +24,7 @@ import javax.servlet.http.HttpSession;
 public class StudentController {
 
     @Autowired
-    private StudentService userService;
+    private StudentService studentService;
 
     /**
      * 查询当前登录的学生信息
@@ -33,7 +34,18 @@ public class StudentController {
     @RequestMapping("/queryStudent.do")
     public JsonResult queryStudent(HttpSession session){
         User user = (User) session.getAttribute(StrUtil.LOGIN_USER);
-        return new JsonResult(1,userService.selectStudentByNo(user.getNo()));
+        return new JsonResult(1,studentService.selectStudentByNo(user.getNo()));
+    }
+
+    /**
+     * 添加学生
+     * @param student
+     * @return
+     */
+    @RequestMapping("/insertStudent.do")
+    public JsonResult insert(Student student){
+        studentService.insertStudent(student);
+        return new JsonResult(1,"添加学生成功");
     }
 
 }

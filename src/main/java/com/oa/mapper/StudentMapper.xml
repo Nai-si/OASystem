@@ -11,5 +11,43 @@
         inner join t_course on t_student.cno = t_course.id
         where no = #{no}
     </select>
-
+    <insert id="insertStudent" parameterType="com.oa.entity.Student">
+        insert into t_student(
+        <trim suffixOverrides=",">   <!--去除指定的后缀 ， -->
+            <if test="u_no != null"> u_no, </if>
+            <if test="name != null"> name, </if>
+            <if test="sex != null"> sex, </if>
+            <if test="birthday != null"> birthday, </if>
+            <if test="cardno != null"> cardno, </if>
+            <if test="schoolname != null"> schoolname, </if>
+            <if test="education != null"> education, </if>
+            <if test="phone != null"> phone, </if>
+            <if test="email != null"> email, </if>
+            <if test="qq != null"> qq, </if>
+            <if test="cno != null"> cno, </if>
+            <if test="introno != null"> introno, </if>
+            <if test="flag != null"> flag, </if>
+            <if test="entrytime != null"> entrytime, </if>
+            <if test="g_name != null"> g_name,</if>
+        </trim>
+        ) values (
+        <trim suffixOverrides=",">   <!--去除指定的后缀 ， -->
+            <if test="u_no != null"> #{u_no}, </if>
+            <if test="name != null"> #{name}, </if>
+            <if test="sex != null"> #{sex}, </if>
+            <if test="birthday != null"> #{birthday}, </if>
+            <if test="cardno != null"> #{cardno}, </if>
+            <if test="schoolname != null"> #{schoolname}, </if>
+            <if test="education != null"> #{education}, </if>
+            <if test="phone != null"> #{phone}, </if>
+            <if test="email != null"> #{email}, </if>
+            <if test="qq != null"> #{qq}, </if>
+            <if test="cno != null"> #{cno}, </if>
+            <if test="introno != null"> #{introno}, </if>
+            <if test="flag != null"> #{flag}, </if>
+            <if test="entrytime != null"> #{entrytime}, </if>
+            <if test="g_name != null"> #{g_name}</if>
+        </trim>
+        )
+    </insert>
 </mapper>
