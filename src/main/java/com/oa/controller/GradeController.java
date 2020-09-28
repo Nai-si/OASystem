@@ -66,4 +66,15 @@ public class GradeController {
         return new JsonResult(1,"修改班级信息成功");
     }
 
+    /**
+     * 删除班级信息
+     * @param id
+     * @return
+     */
+    @RequestMapping("/deleteGradeById.do")
+    public JsonResult deleteGradeById(int id){
+        gradeService.deleteGradeById(id);
+        return new JsonResult(1,"删除班级成功");
+    }
+
 }

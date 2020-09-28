@@ -59,5 +59,10 @@ public class GradeServiceImpl implements GradeService {
 
     }
 
+    @Override
+    public void deleteGradeById(int id) {
+        gradeDao.deleteGradeById(id);
+    }
+
 
 }

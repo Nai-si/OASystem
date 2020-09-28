@@ -228,7 +228,7 @@
 					layer.confirm('真的删除行么' +data.id, function(index){
 						layui.$.ajax({
 							type:'get',
-							url:'grade/deleteGradeById.do?id=' + data.id,
+							url:'/OASystem/grade/deleteGradeById.do?id=' + data.id,
 							dataType:'json',
 							success:function (data) {
 								if (data.code == 1) {

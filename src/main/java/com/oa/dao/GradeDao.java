@@ -29,4 +29,10 @@ public interface GradeDao {
      * @param grade
      */
     void updateGradeInfo(Grade grade);
+
+    /**
+     * 删除班级
+     * @param id
+     */
+    void deleteGradeById(int id);
 }

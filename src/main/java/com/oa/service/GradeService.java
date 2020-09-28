@@ -37,4 +37,10 @@ public interface GradeService {
      * @param grade
      */
     void updateGradeInfo(Grade grade);
+
+    /**
+     * 删除班级信息
+     * @param id
+     */
+    void deleteGradeById(int id);
 }

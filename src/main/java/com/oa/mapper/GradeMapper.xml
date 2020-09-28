@@ -41,4 +41,8 @@
         </set>
         where id = #{id}
     </update>
+    <!-- 删除班级 -->
+    <delete id="deleteGradeById" parameterType="int">
+        delete from t_grade where id = #{id}
+    </delete>
 </mapper>
