@@ -2,6 +2,8 @@ package com.oa.service;
 
 import com.oa.entity.Week;
 
+import java.util.List;
+
 /**
  * @ProjectName: OASystem
  * @Author: Jsx
@@ -15,5 +17,11 @@ public interface WeekService {
      * @param week
      */
     void addWeek(Week week);
+
+    /**
+     * 周报列表分页展示
+     * @return
+     */
+    List<Week> select(Integer page ,Integer limit);
 
 }

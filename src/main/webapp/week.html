@@ -94,7 +94,7 @@
             //z找到table  id叫test的组件
             elem: '#test'
             ,id:"table"
-            ,url:"week/queryWeek.do"
+            ,url:"/OASystem/week/queryWeek.do"
             ,totalRow: true
             //这个很关键，就是解析 json数据库中数据的 一定要注意键值
             ,cols: [[
@@ -130,7 +130,7 @@
                     error : function(){
                         alert("ajax加载失败");
                     }
-9
+
                 })
 
                 //window.location.href = "http://localhost:8080/carsys/mymain/mymain.html?id=" + data.id
