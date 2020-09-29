@@ -142,13 +142,13 @@
             },
             pass: [/(.+){6,12}$/, '密码必须6到12位'],
             content: function (value) {
-                layedit.sync(editIndex);
+                layedit.sync(editIndex);z
             }
         });
         $("#submit").click(function () {
             $.ajax({
                 type: "post",
-                url: "staffAdd.do",
+                url: "/OASystem/staff/staffAdd.do",
                 data: $("form").serialize(),
                 dataType: "json",
                 success: function (data) {

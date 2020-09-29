@@ -18,4 +18,9 @@ public interface StaffDao {
      */
     List<Staff> selectStaffAll();
 
+    /**
+     * 新增员工
+     * @param staff
+     */
+    void insertStaff(Staff staff);
 }

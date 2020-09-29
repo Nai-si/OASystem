@@ -9,16 +9,17 @@ package com.oa.entity;
 public class Staff {
     private int id;
     private String u_no;
-    private String d_id;
+    private String did;
     private String d_name;
-    private String name;
+    private int flag;
     private String sex;
     private String email;
     private String qq;
     private String phone;
     private String heading;
     private String entryTime;
-    private int flag;
+    private String name;
+    private String dName;
 
     public int getId() {
         return id;
@@ -36,12 +37,12 @@ public class Staff {
         this.u_no = u_no;
     }
 
-    public String getD_id() {
-        return d_id;
+    public String getDid() {
+        return did;
     }
 
-    public void setD_id(String d_id) {
-        this.d_id = d_id;
+    public void setDid(String did) {
+        this.did = did;
     }
 
     public String getD_name() {
@@ -52,12 +53,12 @@ public class Staff {
         this.d_name = d_name;
     }
 
-    public String getName() {
-        return name;
+    public int getFlag() {
+        return flag;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFlag(int flag) {
+        this.flag = flag;
     }
 
     public String getSex() {
@@ -108,30 +109,39 @@ public class Staff {
         this.entryTime = entryTime;
     }
 
-    public int getFlag() {
-        return flag;
+    public String getName() {
+        return name;
     }
 
-    public void setFlag(int flag) {
-        this.flag = flag;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getdName() {
+        return dName;
+    }
+
+    public void setdName(String dName) {
+        this.dName = dName;
     }
 
     public Staff() {
     }
 
-    public Staff(int id, String u_no, String d_id, String d_name, String name, String sex, String email, String qq, String phone, String heading, String entryTime, int flag) {
+    public Staff(int id, String u_no, String did, String d_name, int flag, String sex, String email, String qq, String phone, String heading, String entryTime, String name, String dName) {
         this.id = id;
         this.u_no = u_no;
-        this.d_id = d_id;
+        this.did = did;
         this.d_name = d_name;
-        this.name = name;
+        this.flag = flag;
         this.sex = sex;
         this.email = email;
         this.qq = qq;
         this.phone = phone;
         this.heading = heading;
         this.entryTime = entryTime;
-        this.flag = flag;
+        this.name = name;
+        this.dName = dName;
     }
 
     @Override
@@ -139,16 +149,17 @@ public class Staff {
         return "Staff{" +
                 "id=" + id +
                 ", u_no='" + u_no + '\'' +
-                ", d_id='" + d_id + '\'' +
+                ", did='" + did + '\'' +
                 ", d_name='" + d_name + '\'' +
-                ", name='" + name + '\'' +
+                ", flag=" + flag +
                 ", sex='" + sex + '\'' +
                 ", email='" + email + '\'' +
                 ", qq='" + qq + '\'' +
                 ", phone='" + phone + '\'' +
                 ", heading='" + heading + '\'' +
                 ", entryTime='" + entryTime + '\'' +
-                ", flag=" + flag +
+                ", name='" + name + '\'' +
+                ", dName='" + dName + '\'' +
                 '}';
     }
 }

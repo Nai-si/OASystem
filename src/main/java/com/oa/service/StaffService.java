@@ -20,4 +20,9 @@ public interface StaffService {
      */
     List<Staff> selectStaffAll(Integer page , Integer limit);
 
+    /**
+     * 新增员工
+     * @param staff
+     */
+    void insertStaff(Staff staff);
 }

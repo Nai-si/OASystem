@@ -1,7 +1,10 @@
 package com.oa.controller;
 
 import com.github.pagehelper.Page;
+import com.oa.common.JsonResult;
+import com.oa.entity.Depart;
 import com.oa.entity.Staff;
+import com.oa.service.DepartService;
 import com.oa.service.StaffService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +29,9 @@ public class StaffController {
     @Autowired
     private StaffService staffService;
 
+    @Autowired
+    private DepartService departService;
+
     /**
      * 查询所有员工信息，并分页展示
      * @param page
@@ -44,4 +50,23 @@ public class StaffController {
         return map;
     }
 
+    /**
+     * 新增员工
+     * @param staff
+     * @return
+     */
+    @RequestMapping("/staffAdd.do")
+    public JsonResult staffAdd(Staff staff){
+        String d_name = null;
+        String did = staff.getDid();
+        List<Depart> departs = departService.selectAll();
+        for (Depart depart : departs) {
+            if (depart.getId() == Integer.parseInt(did)) {
+                d_name = depart.getName();
+            }
+        }
+        staff.setD_name(d_name);
+        staffService.insertStaff(staff);
+        return new JsonResult(1,"添加成功");
+    }
 }

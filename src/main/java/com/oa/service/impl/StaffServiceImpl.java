@@ -32,4 +32,13 @@ public class StaffServiceImpl implements StaffService {
         PageHelper.startPage(page,limit);
         return staffDao.selectStaffAll();
     }
+
+    /**
+     * 新增员工
+     * @param staff
+     */
+    @Override
+    public void insertStaff(Staff staff) {
+        staffDao.insertStaff(staff);
+    }
 }
