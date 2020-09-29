@@ -30,4 +30,11 @@ public interface WeekService {
      */
     void update(Week week);
 
+    /**
+     * 查询周报内容
+     * @param id
+     * @return
+     */
+    Week selectById(Integer id);
+
 }

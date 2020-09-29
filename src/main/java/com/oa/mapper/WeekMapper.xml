@@ -31,4 +31,7 @@
         </set>
         where id = #{id};
     </update>
+    <select id="selectById" parameterType="int" resultType="com.oa.entity.Week">
+        select * from t_week where id =#{id}
+    </select>
 </mapper>

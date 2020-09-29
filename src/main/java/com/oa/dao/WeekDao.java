@@ -30,4 +30,11 @@ public interface WeekDao {
      */
     void update(Week week);
 
+    /**
+     * 查询周报的内容
+     * @param id
+     * @return
+     */
+    Week selectById(Integer id);
+
 }

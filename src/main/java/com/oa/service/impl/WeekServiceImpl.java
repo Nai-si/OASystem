@@ -37,5 +37,10 @@ public class WeekServiceImpl implements WeekService {
         weekDao.update(week);
     }
 
+    @Override
+    public Week selectById(Integer id) {
+        return weekDao.selectById(id);
+    }
+
 
 }

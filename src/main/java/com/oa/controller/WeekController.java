@@ -67,7 +67,16 @@ public class WeekController {
         weekService.update(week);
         return new JsonResult(1,"修改成功");
 
+    }
 
+    /**
+     * 查询周报内容并显示在修改界面的输入框内
+     * @param id
+     * @return
+     */
+    @RequestMapping("/queryWeekById.do")
+    public JsonResult query(String id){
+        return new JsonResult(1,weekService.selectById(Integer.parseInt(id)));
     }
 
 }
