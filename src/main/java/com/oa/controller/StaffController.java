@@ -69,4 +69,10 @@ public class StaffController {
         staffService.insertStaff(staff);
         return new JsonResult(1,"添加成功");
     }
+
+    @RequestMapping("/delete.do")
+    public JsonResult delete(String id){
+        staffService.del(Integer.parseInt(id));
+        return new JsonResult(1,"删除成功");
+    }
 }

@@ -41,4 +41,9 @@ public class StaffServiceImpl implements StaffService {
     public void insertStaff(Staff staff) {
         staffDao.insertStaff(staff);
     }
+
+    @Override
+    public void del(int id) {
+        staffDao.del(id);
+    }
 }

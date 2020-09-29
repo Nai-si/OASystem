@@ -23,4 +23,10 @@ public interface StaffDao {
      * @param staff
      */
     void insertStaff(Staff staff);
+
+    /**
+     * 删除员工
+     * @param id
+     */
+    void del(int id);
 }
