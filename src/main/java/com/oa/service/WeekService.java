@@ -24,4 +24,10 @@ public interface WeekService {
      */
     List<Week> select(Integer page ,Integer limit);
 
+    /**
+     * 修改周报
+     * @param week
+     */
+    void update(Week week);
+
 }

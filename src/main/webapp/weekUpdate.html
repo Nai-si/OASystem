@@ -84,11 +84,13 @@
         $.ajax({
             type: "get",
             data: $("form").serialize(),
-            url: "week/update.do" + id,
-            //success里面的内容没有执行
+            url: "/OASystem/week/update.do" + id,
+            dataType:"json",
             success: function(data) {
-                alert(data.info);
-                window.location.href = "http://localhost:8080/OaNew/week.html";
+                if(data.code == 1){
+                    alert(data.info);
+                    window.location.href = "week.html";
+                }
             }
         })
     });

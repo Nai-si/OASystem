@@ -32,5 +32,10 @@ public class WeekServiceImpl implements WeekService {
         return weekDao.select();
     }
 
+    @Override
+    public void update(Week week) {
+        weekDao.update(week);
+    }
+
 
 }

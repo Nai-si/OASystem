@@ -55,4 +55,19 @@ public class WeekController {
         return map;
     }
 
+    @RequestMapping("/update.do")
+    public JsonResult update(String id, String title, String content, Integer status, String createTime, String u_no){
+        Week week = new Week();
+        week.setId(Integer.parseInt(id));
+        week.setTitle(title);
+        week.setContent(content);
+        week.setStatus(status);
+        week.setCreateTime(createTime);
+        week.setU_no(u_no);
+        weekService.update(week);
+        return new JsonResult(1,"修改成功");
+
+
+    }
+
 }

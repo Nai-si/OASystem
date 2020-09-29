@@ -1,7 +1,5 @@
 package com.oa.entity;
 
-import java.util.Date;
-
 /**
  * @ProjectName: OASystem
  * @Author: Jsx
@@ -13,7 +11,7 @@ public class Week {
     private String title;
     private String content;
     private int status;
-    private Date createTime;
+    private String createTime;
     private String u_no;
 
     public int getId() {
@@ -48,11 +46,11 @@ public class Week {
         this.status = status;
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 

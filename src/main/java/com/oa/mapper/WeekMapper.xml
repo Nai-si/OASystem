@@ -10,4 +10,25 @@
     <select id="select" resultType="com.oa.entity.Week">
         select * from t_week
     </select>
+    <update id="update" parameterType="com.oa.entity.Week">
+        update t_week
+        <set>
+            <if test="title != null">
+                title = #{title},
+            </if>
+            <if test="content != null">
+                content = #{content},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="createTime != null">
+                createTime = #{createTime},
+            </if>
+            <if test="u_no != null">
+                u_no = #{u_no},
+            </if>
+        </set>
+        where id = #{id};
+    </update>
 </mapper>

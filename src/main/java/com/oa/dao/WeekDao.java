@@ -24,4 +24,10 @@ public interface WeekDao {
      */
     List<Week> select();
 
+    /**
+     * 修改周报内容
+     * @param week
+     */
+    void update(Week week);
+
 }
