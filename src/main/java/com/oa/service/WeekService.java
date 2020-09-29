@@ -37,4 +37,10 @@ public interface WeekService {
      */
     Week selectById(Integer id);
 
+    /**
+     * 删除周报
+     * @param id
+     */
+    void deleteById(Integer id);
+
 }

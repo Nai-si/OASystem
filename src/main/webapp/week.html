@@ -118,14 +118,13 @@
             if (obj.event === 'del') {
                 var getid = window.location.search
                 //window.location.href = "http://localhost:8080/carsys/order/deleteById.do?id="+ data.id
-
                 $.ajax({
                     type:"get",
-                    url:"week/deleteById.do?id="+ data.id,
+                    url:"/OASystem/week/deleteById.do?id="+ data.id,
                     dataType:"json",
                     success:function(data){
                         alert(data.info);
-                        window.location.href="http://localhost:8080/OaNew/week.html";
+                        window.location.href="week.html";
                     },
                     error : function(){
                         alert("ajax加载失败");

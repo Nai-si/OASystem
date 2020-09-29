@@ -79,4 +79,14 @@ public class WeekController {
         return new JsonResult(1,weekService.selectById(Integer.parseInt(id)));
     }
 
+    /**
+     * 删除周报
+     * @param id
+     * @return
+     */
+    @RequestMapping("/deleteById.do")
+    public JsonResult delete(Integer id){
+        weekService.deleteById(id);
+        return new JsonResult(1,"删除成功");
+    }
 }

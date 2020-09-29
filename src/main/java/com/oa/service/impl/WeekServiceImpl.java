@@ -42,5 +42,10 @@ public class WeekServiceImpl implements WeekService {
         return weekDao.selectById(id);
     }
 
+    @Override
+    public void deleteById(Integer id) {
+        weekDao.deleteById(id);
+    }
+
 
 }

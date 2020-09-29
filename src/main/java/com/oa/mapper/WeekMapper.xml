@@ -34,4 +34,7 @@
     <select id="selectById" parameterType="int" resultType="com.oa.entity.Week">
         select * from t_week where id =#{id}
     </select>
+    <delete id="deleteById" parameterType="int">
+        delete from t_week where id=#{id}
+    </delete>
 </mapper>
