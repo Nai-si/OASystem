@@ -24,4 +24,10 @@ public interface CourseService {
      */
     List<Course> selectAll();
 
+    /**
+     * 修改学科信息
+     * @param course
+     */
+    void updateCourse(Course course);
+
 }

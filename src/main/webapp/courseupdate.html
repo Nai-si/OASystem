@@ -33,6 +33,7 @@
             $("#f1").val(obj.name);
             $("#f2").val(obj.createtime);
             $("#f3").val(obj.week);
+            $("#f4").val(obj.type);
             $("#f5").val(obj.id);
         }
     </script>
@@ -87,10 +88,10 @@
         $.ajax({
             type:"post",
             data:$('form').serialize(),
-            url:"course/courseupdate.do",
-            success:function (res) {
-                console.log(res)
-                if(res.code==1){
+            url:"/OASystem/course/updateCourse.do",
+            success:function (data) {
+                console.log(data)
+                if(data.code==1){
                     //console.log("修改成功")
                     alert("修改成功")
                     window.location.href="courselist.html"

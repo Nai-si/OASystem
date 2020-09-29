@@ -10,4 +10,22 @@
     <select id="selectAll" resultType="com.oa.entity.Course">
         select * from t_course
     </select>
+    <update id="updateCourse" parameterType="com.oa.entity.Course">
+        update  t_course
+        <set>
+            <if test="name != null">
+                name=#{name},
+            </if>
+            <if test="createtime != null">
+                createtime=#{createtime},
+            </if>
+            <if test="week != null">
+                week=#{week},
+            </if>
+            <if test="type != null">
+                type=#{type}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
 </mapper>

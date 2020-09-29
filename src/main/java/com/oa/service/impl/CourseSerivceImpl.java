@@ -29,4 +29,9 @@ public class CourseSerivceImpl implements CourseService {
     public List<Course> selectAll() {
         return courseDao.selectAll();
     }
+
+    @Override
+    public void updateCourse(Course course) {
+        courseDao.updateCourse(course);
+    }
 }

@@ -54,4 +54,26 @@ public class CourseController {
         map.put("data", list);
         return map;
     }
+
+    /**
+     * 修改学科信息
+     * @param id
+     * @param name
+     * @param createtime
+     * @param week
+     * @param type
+     * @return
+     */
+    @RequestMapping("/updateCourse.do")
+    public JsonResult update(Integer id , String name, Date createtime,Integer week, Integer type){
+        Course course = new Course();
+        course.setId(id);
+        course.setName(name);
+        course.setCreatetime(createtime);
+        course.setWeek(week);
+        course.setType(type);
+        courseService.updateCourse(course);
+        return new JsonResult(1,"修改成功");
+
+    }
 }
