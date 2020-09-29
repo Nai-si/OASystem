@@ -45,11 +45,11 @@
             if(obj.event === 'del'){
                 layer.confirm('是否确认删除部门?', function(index){
                     $.ajax({
-                        url: "course/coursedelete.do",
+                        url: "/OASystem/course/deleteCourse.do",
                         type: "POST",
                         data:"id="+data.id,
                         success: function(data){
-                            if(data.code==1000){
+                            if(data.code==1){
                                 obj.del();//删除表格中的对应行数据
                                 layer.close(index);
                                 layer.msg("删除成功", {icon: 6});

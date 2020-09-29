@@ -28,4 +28,7 @@
         </set>
         where id=#{id}
     </update>
+    <delete id="deleteCourse" parameterType="java.lang.Integer">
+        delete from t_course where id =#{id};
+    </delete>
 </mapper>

@@ -76,4 +76,10 @@ public class CourseController {
         return new JsonResult(1,"修改成功");
 
     }
+
+    @RequestMapping("/deleteCourse.do")
+    public JsonResult delete(Integer id){
+        courseService.deleteCourse(id);
+        return new JsonResult(1,"删除成功");
+    }
 }

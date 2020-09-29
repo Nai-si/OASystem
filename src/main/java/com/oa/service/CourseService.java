@@ -30,4 +30,10 @@ public interface CourseService {
      */
     void updateCourse(Course course);
 
+    /**
+     * 删除学科
+     * @param id
+     */
+    void deleteCourse(Integer id);
+
 }
