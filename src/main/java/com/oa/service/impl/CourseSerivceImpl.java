@@ -6,6 +6,8 @@ import com.oa.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @ProjectName: OASystem
  * @Author: Jsx
@@ -21,5 +23,10 @@ public class CourseSerivceImpl implements CourseService {
     @Override
     public void addCourse(Course course) {
         courseDao.addCourse(course);
+    }
+
+    @Override
+    public List<Course> selectAll() {
+        return courseDao.selectAll();
     }
 }

@@ -6,7 +6,7 @@ import java.util.Date;
  * @ProjectName: OASystem
  * @Author: Jsx
  * @Time: 2020/9/29 11:27
- * @Description:
+ * @Description: 学科信息实体类
  */
 public class Course {
     private int id;

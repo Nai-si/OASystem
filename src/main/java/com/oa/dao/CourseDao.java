@@ -2,6 +2,8 @@ package com.oa.dao;
 
 import com.oa.entity.Course;
 
+import java.util.List;
+
 /**
  * @ProjectName: OASystem
  * @Author: Jsx
@@ -15,5 +17,11 @@ public interface CourseDao {
      * @param course
      */
     void addCourse(Course course);
+
+    /**
+     * 查询所有学科信息
+     * @return
+     */
+    List<Course> selectAll();
 
 }

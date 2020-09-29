@@ -7,4 +7,7 @@
         insert into t_course (name,createtime,week,type)
         values (#{name},#{createtime},#{week},#{type})
     </insert>
+    <select id="selectAll" resultType="com.oa.entity.Course">
+        select * from t_course
+    </select>
 </mapper>
