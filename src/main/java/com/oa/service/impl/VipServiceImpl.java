@@ -26,4 +26,9 @@ public class VipServiceImpl implements VipService {
         PageHelper.startPage(page,limit);
         return vipDao.select();
     }
+
+    @Override
+    public void add(Vip vip) {
+        vipDao.add(vip);
+    }
 }

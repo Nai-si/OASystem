@@ -33,7 +33,7 @@
     $("form").submit(function () {
         $.ajax({
             type:"get",
-            url:"http://localhost:8080/OaNew/vip/add.do",
+            url:"/OASystem/vip/add.do",
             data:$("form").serialize(),
             success:function (data) {
                 alert(data.info)

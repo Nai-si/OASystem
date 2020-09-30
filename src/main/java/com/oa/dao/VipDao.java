@@ -17,4 +17,10 @@ public interface VipDao {
      * @return
      */
     List<Vip> select();
+
+    /**
+     * 添加vip申请
+     * @param vip
+     */
+    void add(Vip vip);
 }

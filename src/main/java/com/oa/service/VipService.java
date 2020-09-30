@@ -19,4 +19,10 @@ public interface VipService {
      * @return
      */
     List<Vip> select(Integer page , Integer limit);
+
+    /**
+     * 添加vip申请
+     * @param vip
+     */
+    void add(Vip vip);
 }

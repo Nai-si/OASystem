@@ -6,4 +6,8 @@
     <select id="select" resultType="com.oa.entity.Vip">
         select * from t_vip
     </select>
+    <insert id="add" parameterType="com.oa.entity.Vip">
+        insert into t_vip (content, u_no)
+        VALUES (#{content}, #{u_no})
+    </insert>
 </mapper>
