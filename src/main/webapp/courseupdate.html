@@ -39,7 +39,7 @@
     </script>
 </head>
 <body>
-<div class="layui-container" style="margin-top: 5px">
+<div class="layui-container" style="margin-top: 5px" onsubmit="return false;">
     <form class="layui-form">
         <div class="layui-form-item">
             <input type="hidden" name="id" id="f5"> <label
@@ -84,27 +84,45 @@
 <script src="media/layui/layui.js"></script>
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>
-    function clickit() {
+    // function clickit() {
+    //     $.ajax({
+    //         type:"post",
+    //         data:$('form').serialize(),
+    //         url:"/OASystem/course/updateCourse.do",
+    //         success:function (data) {
+    //             console.log(data)
+    //             if(data.code==1){
+    //                 //console.log("修改成功")
+    //                 alert("修改成功")
+    //                 window.location.href="courselist.html"
+    //             }else{
+    //                 alert(1)
+    //             }
+    //         },
+    //         error:function () {
+    //             console.log("error")
+    //         }
+    //     })
+    //     return false;
+    // }
+    $("form").submit(function () {
+        var id = window.location.search
+        //alert(id)
         $.ajax({
-            type:"post",
-            data:$('form').serialize(),
+            type: "get",
+            data: $("form").serialize(),
             url:"/OASystem/course/updateCourse.do",
-            success:function (data) {
+            dataType:"json",
+            success: function(data) {
                 console.log(data)
-                if(data.code==1){
-                    //console.log("修改成功")
-                    alert("修改成功")
-                    window.location.href="courselist.html"
-                }else{
-                    alert(1)
+                if(data.code == 1){
+                    alert(data.info);
+                    window.location.href = "courselist.html";
                 }
-            },
-            error:function () {
-                console.log("error")
             }
         })
-        return false;
-    }
+
+    });
 </script>
 <script>
     layui.use([ 'form', 'laydate' ], function() {
