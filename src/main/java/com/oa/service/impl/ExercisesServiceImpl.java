@@ -31,4 +31,12 @@ public class ExercisesServiceImpl implements ExercisesService {
     public void add(Exercises exercises) {
         exercisesDao.add(exercises);
     }
+
+    @Override
+    public void deleteById(Integer id) {
+        if (id == null) {
+            throw new RuntimeException("id为空");
+        }
+        exercisesDao.deleteById(id);
+    }
 }

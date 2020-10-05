@@ -50,4 +50,10 @@ public class ExercisesController {
         return new JsonResult(1,"添加成功！");
     }
 
+    @RequestMapping("/delete.do")
+    public JsonResult delete(int id){
+        exercisesService.deleteById(id);
+        return new JsonResult(1,"删除成功");
+    }
+
 }

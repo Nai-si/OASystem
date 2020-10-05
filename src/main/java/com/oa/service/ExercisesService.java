@@ -15,4 +15,6 @@ public interface ExercisesService {
     List<Exercises> select(Integer page, Integer limit);
 
     void add(Exercises exercises);
+
+    void deleteById(Integer id);
 }

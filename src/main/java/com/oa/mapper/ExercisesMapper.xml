@@ -10,4 +10,7 @@
         insert into t_exercises (category, equestion, eanswer)
          values (#{category}, #{equestion}, #{eanswer})
     </insert>
+    <delete id="deleteById" parameterType="int" >
+         delete from t_exercises where id = #{id}
+    </delete>
 </mapper>

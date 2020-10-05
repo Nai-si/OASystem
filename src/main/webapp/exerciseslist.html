@@ -71,7 +71,7 @@
 
                     $.ajax({
                         type: "get",
-                        url: "exer/delete.do?id="+ data.id,
+                        url: "/OASystem/exer/delete.do?id="+ data.id,
                         dataType: "json",
                         success: function (data) {
                             if (data.code == 1) {
