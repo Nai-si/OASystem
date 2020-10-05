@@ -18,4 +18,11 @@ public interface AnonymityService {
      */
     List<Anonymity> selectAll(Integer page,Integer limit);
 
+    /**
+     * 添加匿名投诉
+     * @param content
+     * @param u_no
+     */
+    void add(String content,String u_no);
+
 }

@@ -6,4 +6,8 @@
     <select id="selectAll" resultType="com.oa.entity.Anonymity">
         select * from t_anonymity
     </select>
+    <insert id="add" parameterType="string">
+        insert into t_anonymity (content, u_no)
+        VALUES (#{content}, #{u_no});
+    </insert>
 </mapper>

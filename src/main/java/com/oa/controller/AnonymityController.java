@@ -1,13 +1,17 @@
 package com.oa.controller;
 
 import com.github.pagehelper.Page;
+import com.oa.common.JsonResult;
 import com.oa.entity.Anonymity;
+import com.oa.entity.User;
 import com.oa.service.AnonymityService;
+import com.oa.util.StrUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,5 +47,18 @@ public class AnonymityController {
         map.put("data", list);
         return map;
 
+    }
+
+    /**
+     * 添加匿名投诉
+     * @param content
+     * @param session
+     * @return
+     */
+    @RequestMapping("/add.do")
+    public JsonResult add(String content, HttpSession session){
+        User user = (User) session.getAttribute(StrUtil.LOGIN_USER);
+        anonymityService.add(content,user.getNo());
+        return new JsonResult(1,"投诉成功！");
     }
 }

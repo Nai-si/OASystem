@@ -1,6 +1,7 @@
 package com.oa.dao;
 
 import com.oa.entity.Anonymity;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -18,4 +19,10 @@ public interface AnonymityDao {
      */
     List<Anonymity> selectAll();
 
+    /**
+     * 添加匿名投诉
+     * @param content
+     * @param u_no
+     */
+    void add(@Param("content") String content , @Param("u_no") String u_no);
 }

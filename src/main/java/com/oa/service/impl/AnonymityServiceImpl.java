@@ -27,4 +27,11 @@ public class AnonymityServiceImpl implements AnonymityService {
         PageHelper.startPage(page,limit);
         return anonymityDao.selectAll();
     }
+
+    @Override
+    public void add(String content, String u_no) {
+        anonymityDao.add(content,u_no);
+    }
+
+
 }
