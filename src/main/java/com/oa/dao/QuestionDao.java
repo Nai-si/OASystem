@@ -20,4 +20,6 @@ public interface QuestionDao {
 
     void deleteById(Integer id);
 
+    void addNote(Question question);
+
 }

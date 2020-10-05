@@ -20,4 +20,6 @@ public interface QuestionService {
 
     void deleteById(Integer id);
 
+    void addNote(Question question);
+
 }

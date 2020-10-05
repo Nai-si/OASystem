@@ -113,4 +113,19 @@ public class QuestionController {
         questionService.deleteById(id);
         return new JsonResult(1,"删除成功");
     }
+
+    @RequestMapping("/addNote.do")
+    public JsonResult addNote(String question ,String answer,HttpSession session){
+        User user = (User) session.getAttribute(StrUtil.LOGIN_USER);
+
+        Question question1 = new Question();
+        question1.setU_no(user.getNo());
+        question1.setFlag("笔记");
+        question1.setQtype("笔记");
+        question1.setQuestion(question);
+        question1.setAnswer(answer);
+
+        questionService.addNote(question1);
+        return new JsonResult(1,"笔记添加成功！");
+    }
 }

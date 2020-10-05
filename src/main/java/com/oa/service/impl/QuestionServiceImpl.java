@@ -40,4 +40,9 @@ public class QuestionServiceImpl implements QuestionService {
     public void deleteById(Integer id) {
         questionDao.deleteById(id);
     }
+
+    @Override
+    public void addNote(Question question) {
+        questionDao.addNote(question);
+    }
 }

@@ -15,4 +15,8 @@
     <delete id="deleteById" parameterType="int">
         delete from t_question where id = #{id}
     </delete>
+
+    <insert id="addNote" parameterType="com.oa.entity.Question">
+        insert into t_question (u_no, question, qtype, flag, answer) values (#{u_no}, #{question}, #{qtype}, #{flag}, #{answer})
+    </insert>
 </mapper>
