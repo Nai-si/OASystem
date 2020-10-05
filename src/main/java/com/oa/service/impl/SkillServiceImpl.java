@@ -1,10 +1,13 @@
 package com.oa.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.oa.dao.SkillDao;
 import com.oa.entity.Skill;
 import com.oa.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @ProjectName: OASystem
@@ -21,4 +24,13 @@ public class SkillServiceImpl implements SkillService {
     public void add(Skill skill) {
         skillDao.add(skill);
     }
+
+    @Override
+    public List<Skill> selectAll(Integer page, Integer limit) {
+        PageHelper.startPage(page,limit);
+        return skillDao.selectAll();
+
+    }
+
+
 }

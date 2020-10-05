@@ -2,6 +2,8 @@ package com.oa.service;
 
 import com.oa.entity.Skill;
 
+import java.util.List;
+
 /**
  * @ProjectName: OASystem
  * @Author: Jsx
@@ -11,4 +13,6 @@ import com.oa.entity.Skill;
 public interface SkillService {
 
     void add(Skill skill);
+
+    List<Skill> selectAll(Integer page ,Integer limit);
 }

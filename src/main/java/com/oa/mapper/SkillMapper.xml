@@ -7,4 +7,7 @@
         insert into t_skill (content, createTime, u_no)
         VALUES (#{content}, now(), #{u_no});
     </insert>
+    <select id="selectAll" resultType="com.oa.entity.Skill">
+        select * from t_skill
+    </select>
 </mapper>

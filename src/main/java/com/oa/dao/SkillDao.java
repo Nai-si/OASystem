@@ -2,6 +2,8 @@ package com.oa.dao;
 
 import com.oa.entity.Skill;
 
+import java.util.List;
+
 /**
  * @ProjectName: OASystem
  * @Author: Jsx
@@ -12,4 +14,5 @@ public interface SkillDao {
 
     void add(Skill skill);
 
+    List<Skill> selectAll();
 }
