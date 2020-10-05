@@ -12,4 +12,6 @@ import java.util.List;
  */
 public interface ExercisesDao {
     List<Exercises> select();
+
+    void add(Exercises exercises);
 }

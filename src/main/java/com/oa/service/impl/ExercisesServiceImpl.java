@@ -26,4 +26,9 @@ public class ExercisesServiceImpl implements ExercisesService {
         return exercisesDao.select();
 
     }
+
+    @Override
+    public void add(Exercises exercises) {
+        exercisesDao.add(exercises);
+    }
 }

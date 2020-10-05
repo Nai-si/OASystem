@@ -6,4 +6,8 @@
     <select id="select" resultType="com.oa.entity.Exercises">
         select * from t_exercises
     </select>
+    <insert id="add" parameterType="com.oa.entity.Exercises">
+        insert into t_exercises (category, equestion, eanswer)
+         values (#{category}, #{equestion}, #{eanswer})
+    </insert>
 </mapper>

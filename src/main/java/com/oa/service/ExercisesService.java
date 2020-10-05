@@ -13,4 +13,6 @@ import java.util.List;
 public interface ExercisesService {
 
     List<Exercises> select(Integer page, Integer limit);
+
+    void add(Exercises exercises);
 }

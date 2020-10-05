@@ -1,6 +1,7 @@
 package com.oa.controller;
 
 import com.github.pagehelper.Page;
+import com.oa.common.JsonResult;
 import com.oa.entity.Exercises;
 import com.oa.service.ExercisesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,17 @@ public class ExercisesController {
         map.put("count",total);
         map.put("data", list);
         return map;
+    }
+
+    /**
+     * 添加习题
+     * @param exercises
+     * @return
+     */
+    @RequestMapping("/add.do")
+    public JsonResult add(Exercises exercises){
+        exercisesService.add(exercises);
+        return new JsonResult(1,"添加成功！");
     }
 
 }
