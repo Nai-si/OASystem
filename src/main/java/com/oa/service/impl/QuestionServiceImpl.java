@@ -35,4 +35,9 @@ public class QuestionServiceImpl implements QuestionService {
     public void updateById(Question question) {
         questionDao.updateById(question);
     }
+
+    @Override
+    public void deleteById(Integer id) {
+        questionDao.deleteById(id);
+    }
 }

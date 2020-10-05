@@ -107,4 +107,10 @@ public class QuestionController {
         questionService.updateById(q1);
         return new JsonResult(1,"修改成功");
     }
+
+    @RequestMapping("/questiondelete.do")
+    public JsonResult deleteQuestion(Integer id) {
+        questionService.deleteById(id);
+        return new JsonResult(1,"删除成功");
+    }
 }

@@ -12,4 +12,7 @@
     <update id="updateById" parameterType="com.oa.entity.Question">
         update t_question set question = #{question}, answer = #{answer}, qtype = #{qtype} where id = #{id}
     </update>
+    <delete id="deleteById" parameterType="int">
+        delete from t_question where id = #{id}
+    </delete>
 </mapper>

@@ -18,4 +18,6 @@ public interface QuestionService {
 
     void updateById(Question question);
 
+    void deleteById(Integer id);
+
 }
