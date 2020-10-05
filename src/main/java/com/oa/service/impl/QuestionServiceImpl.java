@@ -30,4 +30,9 @@ public class QuestionServiceImpl implements QuestionService {
         PageHelper.startPage(page,limit);
         return questionDao.findAll();
     }
+
+    @Override
+    public void updateById(Question question) {
+        questionDao.updateById(question);
+    }
 }

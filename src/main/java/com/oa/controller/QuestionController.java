@@ -83,4 +83,28 @@ public class QuestionController {
         return map;
 
     }
+
+    @RequestMapping("/questionupdate.do")
+    public JsonResult updateQuestion(Integer id, Integer type, String question, String answer) {
+        Question q1 = new Question();
+        if(1 == type) {
+            q1.setQtype("基础面试");
+        }
+        if(2 == type) {
+            q1.setQtype("进阶面试");
+        }
+        if(3 == type) {
+            q1.setQtype("核心算法");
+        }
+        if(4 == type) {
+            q1.setQtype("底层原理");
+        }
+
+        q1.setId(id);
+        q1.setQuestion(question);
+        q1.setAnswer(answer);
+
+        questionService.updateById(q1);
+        return new JsonResult(1,"修改成功");
+    }
 }

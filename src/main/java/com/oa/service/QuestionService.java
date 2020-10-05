@@ -16,4 +16,6 @@ public interface QuestionService {
 
     List<Question> findAll(Integer page,Integer limit);
 
+    void updateById(Question question);
+
 }

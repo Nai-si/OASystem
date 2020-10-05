@@ -9,4 +9,7 @@
     <select id="findAll" resultType="com.oa.entity.Question">
         select * from t_question
     </select>
+    <update id="updateById" parameterType="com.oa.entity.Question">
+        update t_question set question = #{question}, answer = #{answer}, qtype = #{qtype} where id = #{id}
+    </update>
 </mapper>

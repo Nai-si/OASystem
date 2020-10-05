@@ -16,4 +16,6 @@ public interface QuestionDao {
 
     List<Question> findAll();
 
+    void updateById(Question question);
+
 }
