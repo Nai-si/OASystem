@@ -22,4 +22,6 @@ public interface QuestionDao {
 
     void addNote(Question question);
 
+    void addCode(Question question);
+
 }

@@ -45,4 +45,9 @@ public class QuestionServiceImpl implements QuestionService {
     public void addNote(Question question) {
         questionDao.addNote(question);
     }
+
+    @Override
+    public void addCode(Question question) {
+        questionDao.addCode(question);
+    }
 }

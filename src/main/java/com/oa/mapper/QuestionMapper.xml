@@ -19,4 +19,9 @@
     <insert id="addNote" parameterType="com.oa.entity.Question">
         insert into t_question (u_no, question, qtype, flag, answer) values (#{u_no}, #{question}, #{qtype}, #{flag}, #{answer})
     </insert>
+
+    <insert id="addCode" parameterType="com.oa.entity.Question">
+        insert into t_question (u_no, question, qtype, flag, answer) values (#{u_no}, #{question}, #{qtype}, #{flag}, #{answer})
+    </insert>
+
 </mapper>

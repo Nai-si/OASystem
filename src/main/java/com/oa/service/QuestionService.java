@@ -22,4 +22,6 @@ public interface QuestionService {
 
     void addNote(Question question);
 
+    void addCode(Question question);
+
 }

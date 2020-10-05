@@ -11,7 +11,7 @@
     <script src="media/js/jquery.min.js"></script>
 </head>
 <body>
-<form method="post">
+<form method="post" onsubmit="return false">
     <div class="layui-form-item">
         <label class="layui-form-label">问题</label>
         <div class="layui-input-block">
@@ -42,7 +42,7 @@
         $("form").submit(function () {
             $.ajax({
                 type:"post",
-                url:"OaNew/addCode.do",
+                url:"/OASystem/question/addCode.do",
                 data:$("form").serialize(),
                 success:function (data) {
                     alert(data.info)

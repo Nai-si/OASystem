@@ -128,4 +128,19 @@ public class QuestionController {
         questionService.addNote(question1);
         return new JsonResult(1,"笔记添加成功！");
     }
+
+    @RequestMapping("/addCode.do")
+    public JsonResult addCode(String question ,String answer,HttpSession session){
+        User user = (User) session.getAttribute(StrUtil.LOGIN_USER);
+
+        Question question1 = new Question();
+        question1.setU_no(user.getNo());
+        question1.setFlag("代码");
+        question1.setQtype("代码");
+        question1.setQuestion(question);
+        question1.setAnswer(answer);
+
+        questionService.addCode(question1);
+        return new JsonResult(1,"代码添加成功！");
+    }
 }
