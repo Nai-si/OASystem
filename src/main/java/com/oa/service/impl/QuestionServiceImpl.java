@@ -1,10 +1,13 @@
 package com.oa.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.oa.dao.QuestionDao;
 import com.oa.entity.Question;
 import com.oa.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @ProjectName: OASystem
@@ -20,5 +23,11 @@ public class QuestionServiceImpl implements QuestionService {
     @Override
     public void addQuestion(Question question) {
         questionDao.addQuestion(question);
+    }
+
+    @Override
+    public List<Question> findAll(Integer page, Integer limit) {
+        PageHelper.startPage(page,limit);
+        return questionDao.findAll();
     }
 }

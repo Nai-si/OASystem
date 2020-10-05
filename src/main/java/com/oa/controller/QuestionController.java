@@ -1,5 +1,6 @@
 package com.oa.controller;
 
+import com.github.pagehelper.Page;
 import com.oa.common.JsonResult;
 import com.oa.entity.Question;
 import com.oa.entity.User;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @ProjectName: OASystem
@@ -65,5 +69,18 @@ public class QuestionController {
         questionService.addQuestion(q1);
 
         return new JsonResult(1,"添加成功");
+    }
+
+    @RequestMapping("/queryquestionbyno.do")
+    public Map<String,Object> query(Integer page, Integer limit){
+        List<Question> list = questionService.findAll(page, limit);
+        long total = ((Page)list).getTotal();
+        Map<String ,Object> map = new HashMap<>();
+        map.put("code", 0);
+        map.put("msg", "");
+        map.put("count", total);
+        map.put("data", list);
+        return map;
+
     }
 }

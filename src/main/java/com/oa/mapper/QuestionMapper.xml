@@ -6,4 +6,7 @@
     <insert id="addQuestion" parameterType="com.oa.entity.Question">
        insert into t_question (u_no, question, answer, qtype, flag, star) values (#{u_no}, #{question}, #{answer}, #{qtype}, #{flag}, #{star})
     </insert>
+    <select id="findAll" resultType="com.oa.entity.Question">
+        select * from t_question
+    </select>
 </mapper>
