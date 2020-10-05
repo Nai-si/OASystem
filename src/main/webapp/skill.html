@@ -32,7 +32,7 @@
     $("form").submit(function () {
         $.ajax({
             type:"get",
-            url:"http://localhost:8080/OaNew/skill/add.do",
+            url:"/OASystem/skill/add.do",
             data:$("form").serialize(),
             success:function (data) {
                 alert(data.info)
@@ -45,7 +45,7 @@
     $(function () {
         $.ajax({
             type: "get",
-            url: "http://localhost:8080/OaNew/user/query.do",
+            url: "/OASystem/user/query.do",
             dataType: "json",
             success: function(data) {
                 console.log(data)
