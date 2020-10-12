@@ -6,4 +6,21 @@
     <select id="selectAll" resultType="com.oa.entity.Depart">
         select * from t_depart
     </select>
+
+    <select id="selectAllDepart" resultType="com.oa.entity.Depart" parameterType="int">
+        select * from t_depart
+    </select>
+
+    <update id="updateDepart" parameterType="com.oa.entity.Depart">
+        update t_depart set name=#{name},createtime=#{createtime} where id =#{id}
+    </update>
+
+    <insert id="addDepart" parameterType="com.oa.entity.Depart">
+        insert  into t_depart (name,createtime)
+        values (#{name},#{createtime})
+    </insert>
+
+    <delete id="deleteDepart" parameterType="int">
+        delete from t_depart where id =#{id}
+    </delete>
 </mapper>

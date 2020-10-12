@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<form class="layui-form layui-form-pane" action="">
+<form class="layui-form layui-form-pane" action="" onsubmit="return false">
 <div class="layui-form-item">
     <div class="layui-inline">
         <label class="layui-form-label">日期选择</label>
@@ -78,10 +78,10 @@
            $.ajax({
                type:"post",
                data:$('form').serialize(),
-               url:"addDepart.do",
+               url:"/OASystem/depart/addDepart.do",
                success:function (res) {
                     if (res.code==1){
-                        layer.msg('成了')
+                        layer.msg('添加成功')
                     }else{
                         layer.msg(res.info)
                     }

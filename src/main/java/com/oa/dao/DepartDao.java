@@ -18,4 +18,12 @@ public interface DepartDao {
      */
     List<Depart> selectAll();
 
+    List<Depart> selectAllDepart();
+
+    void updateDepart(Depart depart);
+
+    void addDepart(Depart depart);
+
+    void deleteDepart(int id);
+
 }
